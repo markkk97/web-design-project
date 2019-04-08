@@ -1,0 +1,79 @@
+body, html {
+    height: 100%;
+}
+  
+  .parallax {
+    /* The image used */
+    
+  
+    /* Full height */
+    height: 200px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.title{
+    z-index: 2;
+    position: fixed;
+    top: 40% ;
+    font-size: 200px !important;
+    color: #fff;
+    hyphens: none !important;
+}
+
+@media screen and (max-width : 1000px){
+    .title{
+        z-index: 2;
+        position: fixed;
+        top: 40% ;
+        font-size: 150px !important;
+        color: #fff;
+        hyphens: none !important;
+    }
+    
+}
+@media screen and (max-width : 780px){
+    .title{
+        z-index: 2;
+        position: fixed;
+        top: 40% ;
+        font-size: 100px !important;
+        color: #fff;
+        hyphens: none !important;
+    }
+    
+}
+
+@media screen and (max-width : 780px){
+    .title{
+        z-index: 2;
+        position: fixed;
+        top: 40% ;
+        font-size: 70px !important;
+        color: #fff;
+        hyphens: none !important;
+    }
+    
+}
+
+.container{
+    background: transparent;
+}
+
+#small{
+    max-width: 70%;
+    max-height: 70%;
+}
+
+.index{
+    z-index: 100;
+}
+
+.pbtn{
+    position: fixed;
+    margin: 10px;
+}

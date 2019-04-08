@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="it">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="progetto webdesign">
+    <meta name="author" content="marco podratz">
+
+    <title>Progetto web design</title>
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+   
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+   
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+    <!--CSS -->
+    <link href="css/personal.css" rel="stylesheet">
+    <link href="css/animation-header.css" rel="stylesheet">
+    <link href="css/ajax.css" rel="stylesheet">
+
+     <!-- JQUERY -->
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+     <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+     <!-- <script src="js/mainjquery.js"></script> -->
+
+   
+  
+    
+    <!-- ANGULARJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-sanitize.js"></script>
+    <script src="js/myevent1.js"></script>
+    <!-- <script src="js/formvalidation.js"></script> -->
+    <!-- <script src="js/routing.js"></script> -->
+
+     <!-- javascript assignments -->
+     <script src="js/main.js"></script>
+     
+    
+     
+    
+
+  </head>
+
+
+  <body id="page-top" ng-app="rootApp" class="" >
+    <div id="overlay">     
+        <button id="toTop" title="Go to top">Top</button>  
+
+    <header class="masthead d-flex"  >
+            <div class="container-fluid " id="boxApp" ng-controller="ngClickCtrl">
+                    <div class="banner banner-top active text-left" role="alert">
+                            <div class="container text-left my-auto" > 
+                                <div class="row">
+                                <div class="col-12">
+ 
+                                <h1 class="mb-1 fadeInSlowTop">What is</h1>
+                                    <h2 class="mb-2 fadeInSlowLeft">Violence Against Women</h2>
+                                    <div class="fadeInSlowLeft">
+                                            <h4 class="mb-5">
+                                                    Whether at home, on the streets or during war, 
+                                                    violence against women and girls is a human rights violation 
+                                                    of pandemic proportions that takes place in public and private 
+                                                    spaces.    
+                                        </h4>
+
+                                    </div>
+                                    <button  type="button" class="btn btn-primary fadeInSlowBottom" ng-click="clickMe(IsDisplay)" ><a class="">Discover more</a></button>
+                                
+                                </div>    
+                                    <!-- ANGULAR NG-CLICK  -->
+                                    <div  class="my-3 p-3 bg-white rounded shadow-lg  boxslider " ng-show="IsDisplay">
+                                            <h2 class="border-bottom border-gray pb-2 mb-0">SELECT A TOPIC</h2>
+                                                    <div ng-repeat="x in records">
+                                                        <div class="text-center media text-muted pt-3 border-bottom border-gray">
+                                            
+                                                         <a href="" ng-click="clickMe(IsDisplay)" class=" animtopic media-body  pb-3 mb-0  lh-125 ">
+                                                            <strong id="{{x}}" class="d-block text-gray-dark">{{x}}</strong>
+                                                
+                                                          </a>
+                                                        </div>
+                                                    </div>
+                                             
+                                            <small class="d-block text-right mt-3">
+                                              <button class="btn" ng-click="clickMe(IsDisplay)">Close</button>
+                                            </small>
+                                    </div>
+                                    
+                                    <!--FINE ANGULAR NG-CLICK  -->
+                                            
+                                    
+                                    
+                            </div> 
+                       
+                        </div>         
+                    </div>
+            
+                    
+                <div class="row pics">
+                    <div class="col-md-6 header-div three"></div>
+                    <div class="col-md-6 header-div four" ></div>
+                    <div class="col-md-6 header-div one" ></div>
+                    <div class="col-md-6 header-div two"></div>
+                </div>
+            </div>
+                  
+    </header>
+
+    
+
+   
+    <div id="sectiontopic" class="album py-5 bg-light">
+            <div class="content-section-heading text-center">
+                    <h2 class="mb-5 nice-title-1">Select a Topic</h2>
+                </div>
+            
+            <div class="container">
+              <div class="row">
+                <div class="col-md-4 scale  " id="childcontainer">
+                  <div class="card mb-4 box-shadow">
+                    <img class="card-img-top"   alt="" style="height: 225px; width: 100%; display: block;" src="img/child.png" data-holder-rendered="true">
+                    <div class="card-body">
+                      <p class="card-text">Click to discover more about this topic</p>
+                    </div>
+                  </div>
+                </div>
+
+               <!-- BANNER CHILD MARRIAGE -->
+
+                <div class="container topic fadeInFastBottom" id="child">
+                    <div class="row">                  
+                        <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
+                            <div class="col-md-12 px-0">
+                                <i class="fas fa-times close" onclick="hideShow('child')"></i>
+                                <h1 class=" font-italic">Child Marriage</h1>
+                                <p class="lead my-3">Child marriage usually means an end to girl’s education, vocation and her right to make life choices. Research confirms that girls who marry in childhood are at greater risk for intimate partner violence than girls of the same age who marry later.</p>
+                            </div>
+                            <div class="row">
+                                    <div class="col-sm-4">
+                                            <h1 class="font-italic">650</h1>
+                                            <h2 class="font-italic">Million</h2>
+                                            <p class="lead my-3">
+                                                    women and girls alive today were married before their 18th birthday.
+                                            </p>
+                                    </div>
+                                    <div class="col-sm-4">
+                                            <img src="img/hand.png" class="img-fluid rounded mx-auto d-block" alt="...">
+                                    </div>
+                                    <div class="col-sm-4">
+                                            <h1 class=" font-italic">4</h1> <h2>in</h2> <h1 class=" font-italic"> 10</h1>
+                                            <p class="lead my-3">
+                                                    girls in West and Central Africa were married before age 18.    
+                                            </p>
+                                    </div>
+                                            
+                            </div>
+                                                       
+                           
+                        </div>
+                    </div>
+                </div>
+
+               <!--END-->
+               
+
+                <div class="col-md-4 scale " id="partnercontainer">
+                        <div class="card mb-4 box-shadow">
+                          <img  alt="" style="height: 225px; width: 100%; display: block;" src="img/partner.png" data-holder-rendered="true">
+                          <div class="card-body">
+                            <p class="card-text">Click to discover more about this topic</p>
+                          </div>
+                        </div>
+                 </div>
+
+                  <!-- BANNER PARTNER VIOLENCE -->
+
+                <div class="container topic fadeInFastBottom" id="partner">
+                        <div class="row">                  
+                            <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
+                                <div class="col-md-12 px-0">
+                                    <i class="fas fa-times close" onclick="hideShow('partner')"></i>
+                                    <h1 class=" font-italic">Intimate Partner Violence</h1>
+                                    <p class="lead my-3">
+                                        Intimate partner violence is any behaviour by a current or former partner or spouse that causes physical, sexual or psychological harm. This is one of the most common forms of violence experienced by women globally.
+                                    </p>
+                                </div>
+
+                                <div class="row">
+                                        <div class="col-sm-6">
+                                                <h1 class="font-italic">1 In 3</h1>
+                                                <p class="lead my-3">
+                                                    Worldwide, 1 in 3 women have experienced physical or sexual violence — mostly by an intimate partner. When accounting for sexual harassment, this figure is even higher.
+                                                </p>
+                                        </div>
+                                       
+                                        
+
+                                        <div class="col-sm-6">
+                                                <img src="img/stop.png" class="img-fluid rounded mx-auto d-block" alt="...">
+                                        </div>
+                                                
+                                </div>
+                                                           
+                               
+                            </div>
+                        </div>
+                    </div>
+    
+                   <!--END-->
+
+                 <div class="col-md-4 scale  " id="violencecontainer">
+                        <div class="card mb-4 box-shadow">
+                          <img  class="card-img-top"  alt="" style="height: 225px; width: 100%; display: block;" src="img/violence.png" data-holder-rendered="true">
+                          <div class="card-body">
+                            <p class="card-text">Click to discover more about this topic</p>
+                          </div>
+                        </div>
+                </div>
+                
+                <!-- BANNER SEXUAL VIOLENCE -->
+
+                <div class="container topic fadeInFastBottom" id="violence">
+                        <div class="row">                  
+                            <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
+                                <div class="col-md-12 px-0">
+                                    <i class="fas fa-times close"  onclick="hideShow('violence')"></i>
+                                    <h1 class=" font-italic">Sexual Violence and Harassment</h1>
+                                    <p class="lead my-3">Sexual violence is any sexual act, attempt to obtain a sexual act, unwelcome sexual comments, advances or other acts of sexual harassment, including against a person’s sexuality, by any person (mostly men) regardless of their relationship to the victim, in any setting.</p>
+                                </div>
+                                <div class="row"> 
+                                        <div class="col-md-6 py-5">
+                                                <img src="img/stop2.png" class="img-fluid rounded mx-auto d-block" alt="...">
+                                        </div>
+
+                                        <div class="col-md-6">
+                                                <h1 class=" font-italic">15 Million</h1>
+                                                <p class="lead my-3">
+                                                        Approximately 15 million adolescent girls (aged 15 to 19) worldwide have experienced forced sex at some point in their life.
+                                                </p>
+                                        </div>
+                                </div>
+                                <div class="row"> 
+                                        <div class="col-sm-6">
+                                                <h2 class="display-5 font-italic">UNWELCOME SEXUAL ADVANCES</h2 >
+                                                <p class="lead my-3">
+                                                        girls in West and Central Africa were married before age 18.    
+                                                </p>
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                                <h2 class="display-5 font-italic">FORCED MARRIAGE</h2>
+                                                <p class="lead my-3">
+                                                        girls in West and Central Africa were married before age 18.    
+                                                </p>
+                                        </div>
+                                                
+                                </div>
+                                                           
+                               
+                            </div>
+                        </div>
+                    </div>
+    
+                   <!--END-->
+
+              </div>
+            </div>
+          </div>
+
+          <!-- GRAPHS -->
+          <div id="sfondo-graphs" class="album py-5 ">
+                <div class="content-section-heading py-5 text-center">
+                        <h1 class="nice-title-2" id="prova">Facts</h1>
+                        <h5>Click on the buttons to reveal and hide the facts</h5>
+                        <button class="btn btn-light" id="btn1">Show</button>
+                        <button class="btn btn-primary" id="btn2">Hide</button>
+                </div>
+                
+              <div class="row">
+               
+                <div class="col-md-8 graphcontainer ">
+                   <div id="graph1" class="graph"></div> 
+                </div>
+                <div class="col-md-4 graphcontainer">  
+                        <div id="fact1">
+                            <h2> 38%</h2>
+                            <em> <strong> Murders of women globally are committed by a male intimate partner. </strong> </em>
+                         </div>
+                </div>
+                <div class="col-md-8 graphcontainer">
+                   <div id="graph2" class="graph"></div>
+                </div>
+                <div class="col-md-4 graphcontainer">
+                        <div id="fact2">
+                            <h2>80%</h2>
+                            <em><strong>Women and girls are 80% of the estimated 800,000 people trafficked across national borders annually.</strong></em>
+                        </div>
+                </div>
+                <div class="col-md-8 graphcontainer">
+                        <div id="graph3" class="graph"></div>
+                     </div>
+                     <div class="col-md-4 graphcontainer">
+                            <div id="fact3">
+                                    <h2>50%</h2>
+                                    <em><strong>Worldwide, up to 50 percent of sexual assaults are committed against girls under 16.</strong></em>
+                                </div>
+                     </div>
+            
+            </div>
+          </div>
+
+    <!-- SEZIONE SERVIZIO AJAX ANGULAR -->
+<section id="sectiondiscover" class="bg-light jumbotron text-center">
+                <div class="container ">
+                        <div class="row">
+                                <div class="col-md-12">
+                                        <h1 class="jumbotron-heading ">DISCOVER</h1>
+                                        <p class="lead text-muted">Click on the buttons to discover outstanding facts regarding violence against women</p>
+                                        <p class="">
+                                        <a href="#!/" class="btn btn-primary my-2 ">ORGANIZATIONS</a>
+                                        <a href="#!/countries" class="btn btn-primary my-2 ">COUNTRIES</a>
+                                        <a href="gallery.html" class="btn btn-primary my-2 ">#METOO CAMPAIGN</a>
+                                        <a href="europe.html" class="btn btn-primary my-2 only-wide">EUROPE</a>
+                                        </p>
+
+                                </div>
+                        </div>
+                </div>
+       
+        
+        <div class="container" ng-view>
+            
+        </div>
+    
+</section>
+
+
+    <!-- FINE AJAX ANGULAR -->
+
+    <!-- Tabs -->
+<section class="tab-content orange-background">
+    <div class="container">
+        <h3 style="color:white;" class="section-title h3 nice-title-1">Contacts</h3>
+        <div id="holdmessage" class="row">
+            <div class="col-xs-12 wide">
+                    <nav>
+                        <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Get in Touch</a>
+                        </div>
+                    </nav>
+                    <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" >
+                      <!-- FORM VALIDFATION CON ANGULAR -->
+
+                      <div id="myValidate" ng-controller="validateController">
+                            <div class="">
+                                <div class="">  
+                                    
+                                        <form name="userForm" ng-submit="submitForm()" novalidate>
+                                              
+                                            <div class="form-row">
+                                                    <!-- fullname -->
+                                                    <div class="form-group col-md-6">
+                                                        <label>Full Name</label>
+                                                        <input type="text" name="name" class="form-control" ng-model="name" required>
+                                                        <p style="background-color:red;margin: 10px;" class="text-center rounded fadeInFastLeft" ng-show="userForm.name.$invalid && !userForm.name.$pristine" >Your name is required.</p>
+                                                    </div>
+
+                                                    <!-- EMAIL -->
+                                                    <div class="form-group col-md-6">
+                                                        <label>Email</label>
+                                                        <input type="email" name="email" class="form-control" ng-model="email" required>
+                                                        <p style="background-color:red;margin: 10px;" class="text-center rounded fadeInFastLeft" ng-show="userForm.email.$invalid && !userForm.email.$pristine">Enter a valid email address please.</p>
+                                                    </div>
+                                            </div>
+                                           
+                                            
+                                            
+                                            <div class="form-row">
+                                                <!-- TEXTAREA -->
+                                                    <div class="form-group col-md-6">
+                                                            <label>Additional Info</label>
+                                                            <input type="text" name="info" class="form-control" ng-model="info" required>
+                                                            <p style="background-color:red;margin: 10px;" class="text-center rounded fadeInFastLeft" ng-show="userForm.info.$invalid && !userForm.info.$pristine">Add additional info please.</p>
+                                                    </div>
+
+                                                    <div class="form-group col-md-6">
+                                                            <label>Other Stuff</label>
+                                                            <input type="text" name="stuff" class="form-control" ng-model="stuff" required>
+                                                            <p style="background-color:red;margin: 10px;" class="text-center rounded fadeInFastLeft" ng-show="userForm.stuff.$invalid && !userForm.stuff.$pristine">Add additional info please.</p>
+                                                    </div>
+                                                    
+                                                    <button type="submit" class="btn btn-primary" ng-disabled="userForm.$invalid">Submit</button>
+                                            </div>
+                                            
+
+                                        </form>      
+                                    
+                            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- ./Tabs -->
+
+    <!-- personal alert -->
+    <div id="confirm" class="">
+        <p class="message"></p><hr>
+        <button class="yes btn btn-primary">OK</button>
+    </div>
+         
+   
+    
+    </div>
+
+    
+    
+  </body>
+
+
+</html>

@@ -1,0 +1,45 @@
+
+<div class="container" id="listApp" ng-controller="listCtrl">
+    <div class="row py-5"> 
+      <div class="col-12 break">
+        <h1 class="my-4 py-2 text-center font-italic">
+            No profit organizations
+        </h1>
+      </div>
+     
+    <div class="col-md-6 text-left fadeInFastLeft" ng-app="" ng-init="do=['Never ignore','Ask for help','Report the crime']">
+        <div class="my-3 p-3 bg-white rounded box-shadow">
+            <h3 class="border-bottom border-gray pb-2 mb-0">What to do in cases of violence</h3>
+            <div ng-repeat="x in do" class="media text-muted pt-3 fadeInFast" >
+              <h4 style="color:#FF3366;" class="media-body pb-3 mb-0  lh-125 border-bottom border-gray">
+                {{x}} 
+              </h4>
+            </div>
+            
+        </div>
+    </div>
+    <div class="col-md-6">
+        
+        <ul  class="list-group text-left ">
+
+            <div class="btn-group btn-group-toggle py-2 " data-toggle="buttons">
+                <label class="btn btn-secondary disabled">
+                    Order by : 
+                  </label>
+                <label ng-click="order('category')" class="btn btn-secondary active">
+                  <input type="radio" name="options" id="option1" autocomplete="off" checked> Category
+                </label>
+                <label ng-click="order('name')" class="btn btn-secondary">
+                  <input type="radio" name="options" id="option2" autocomplete="off"> Name
+                </label>
+              </div>
+            <li style="margin-bottom:15px;background-color:#fff !important" class="list-group-item fadeInRight box-shadow" ng-repeat="x in list | orderBy:Order">
+              <h4>{{x.name}}</h4> 
+              <i>{{x.category}}</i> 
+            </li>
+          </ul>
+    </div>
+   
+  </div>
+
+</div>
